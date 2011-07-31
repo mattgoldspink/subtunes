@@ -1,0 +1,34 @@
+<!DOCTYPE html?>
+<html>
+<head>
+	<title>subTunes</title>
+	<script type="text/javascript">
+	(function() {
+		var extjsVersion = '4.0.2a';
+		window.subtunes = {
+			writeCssToDoc : function(css){
+				for (i = 0; i < css.length; i++) {
+					document.writeln('<li'+'nk rel="stylesheet" type="text/css" href="'+ (css[i].match(/http:/)? '' : window.subtunes.rootUrl) + css[i]+'" />');
+				}
+			},
+		  	writeJsToDoc : function(js) {
+				for (i = 0; i < js.length; i++) {
+					document.writeln('<scr'+'ipt src="' + (js[i].match(/http:/)? '' : window.subtunes.rootUrl) + js[i] + '" type="text/javascript"></scr'+'ipt>');  
+				}
+			},
+			//rootUrl: 'http://subtunes.googlecode.com/svn/trunk/'
+			rootUrl: ''
+		};
+		css = ['ext-'+extjsVersion+'/resources/css/ext-all.css'];
+        js = ['ext-'+extjsVersion+'/ext-debug.js', 'app.js'];
+        window.subtunes.mode = 'desktop';
+        window.subtunes.writeCssToDoc(css);
+        window.subtunes.writeJsToDoc(js);
+	})();
+	</script>
+
+</head>
+<body>
+	 <div id="sm2-container"></div>
+</body>
+</html>
