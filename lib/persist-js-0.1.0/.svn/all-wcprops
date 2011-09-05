@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/39/trunk/persist-js-0.1.0
+END
+.hgignore
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/39/trunk/persist-js-0.1.0/.hgignore
+END
+.hg_archival.txt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/39/trunk/persist-js-0.1.0/.hg_archival.txt
+END
+persist.js
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/39/trunk/persist-js-0.1.0/persist.js
+END
+persist-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/39/trunk/persist-js-0.1.0/persist-min.js
+END
+persist.swf
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/39/trunk/persist-js-0.1.0/persist.swf
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/39/trunk/persist-js-0.1.0/COPYING
+END

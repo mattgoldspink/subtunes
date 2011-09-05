@@ -1,0 +1,49 @@
+Controllers
+    + UserController
+        + loginUser
+        + saveSetting
+        + getSetting
+    + PlaylistController
+        + createPlaylist
+        + addNewSongToPlaylist
+        + deleteSongFromPlaylist
+        + deletePlaylist
+        + renamePlaylist
+        + getAllPlaylists
+    + LibraryController
+        + getAllAlbums
+        + getAllSongs
+        + search
+        + syncDataWithServer
+    + PlayerController
+        + setCurrentPlaylist
+        + play
+        + pause
+        + goBackward
+        + goForward
+        + setVolume
+    + ViewController
+        
+Views
+	+ PlayerControlView
+		+ setCurrentTrack
+	+ LeftBar
+	+ GridView
+	+ AlbumGridView
+	+ CoversView
+	+ CoverflowView
+	+ BottomBar
+	
+URLS
+	+ !/library/
+			   /music/
+			   /movies/
+			   /playlist/
+			   /podcasts/
+							grid
+							albumgrid
+							covers
+							coverflowgrid
+							coverflow
+	+ !/library/
+	

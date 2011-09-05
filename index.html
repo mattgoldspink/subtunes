@@ -16,11 +16,14 @@
 					document.writeln('<scr'+'ipt src="' + (js[i].match(/http:/)? '' : window.subtunes.rootUrl) + js[i] + '" type="text/javascript"></scr'+'ipt>');  
 				}
 			},
-			//rootUrl: 'http://subtunes.googlecode.com/svn/trunk/'
 			rootUrl: ''
 		};
-		css = ['ext-'+extjsVersion+'/resources/css/ext-all.css'];
-        js = ['ext-'+extjsVersion+'/ext-debug.js', 'app.js'];
+		css = ['lib/ext-'+extjsVersion+'/resources/css/ext-all-gray.css'];
+        js = [
+        	'lib/ext-'+extjsVersion+'/ext-debug.js', 
+        	'lib/persist-js-0.1.0/persist.js', 
+        	'app.js'
+        ];
         window.subtunes.mode = 'desktop';
         window.subtunes.writeCssToDoc(css);
         window.subtunes.writeJsToDoc(js);
