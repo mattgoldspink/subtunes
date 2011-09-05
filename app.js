@@ -1,3 +1,4 @@
+Ext.Loader.setPath('SubTunesDesktop', 'SubTunesDesktop');
 Ext.require([
 	'Ext.container.Viewport', 
 	'Ext.window.MessageBox',

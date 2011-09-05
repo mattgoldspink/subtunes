@@ -2,10 +2,23 @@ Ext.define('SubTunesDesktop.controller.LibraryController', {
     extend: 'Ext.app.Controller',
     stores: ['Library'],
     models: ['Record'],
+    asyncMode: false,
     init: function(application) {
     	this.loginDetails = application.statics.loginDetails;
-    	this.restApi = this.getController('SubsonicRestApiController');
 		this.getRecordModel().getProxy();
+
+    	/*if (!!window.Worker) {
+    		Ext.Loader.require('SubTunesDesktop.controller.WebWorkerLoader', this.postLoaderImpl, this);
+    	} else {*/
+    		this.restApi = this.getController('SubsonicRestApiController');
+    	/*}*/
+    },
+    
+    postLoaderImpl: function(){
+    	this.asyncMode = true;
+    	this.restApi = this.getController('SubTunesDesktop.controller.WebWorkerLoader');
+    	this.syncDataWithServer = this.restApi.syncDataWithServer;
+    	this.restApi.init(this.application);
 	},
 	
 	getAllAlbums: function() {
@@ -60,7 +73,6 @@ Ext.define('SubTunesDesktop.controller.LibraryController', {
     
     handleGetIndexes: function(response, options){
     	var indexes = response.responseData.indexes, index, artists;
-    	debugger;
     	if (indexes) {
 			this.getController('UserController').setLastModified(indexes.lastModified);
 			for (var i = 0; i < indexes.index.length; i++) {
