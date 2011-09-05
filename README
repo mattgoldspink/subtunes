@@ -1,0 +1,9 @@
+Subtunes
+========
+
+Subtunes is an Ext.js frontend for the http://www.subsonic.org media server. It began as a way for me to learn Ext.js and Sencha Touch.
+
+As I have very little user experience and design skills (I have little passion for them, though I would not do a project without either) I decided to theme the frontend like iTunes (it's clearly a popular frontend and it's a pretty simplistic design) hence the resemblance (or blatant rip-off) of iTunes)
+
+The current trunk on github is a new branch using Ext.js 4.x, the older Ext.js 3.x version can be found on googlecode at: http://code.google.com/p/subtunes/
+
