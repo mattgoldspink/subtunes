@@ -1,6 +1,6 @@
 Ext.define('SubTunesDesktop.model.Record', {
-    extend: 'Ext.data.Model',
-	requires: ['Ext.data.proxy.BrowserDB'],
+    extend: 	'Ext.data.Model',
+    requires: 	['Ext.data.proxy.BrowserDB'],
     idProperty: 'id',
     fields: [
 		{name: 'id',           type: 'string'},
@@ -13,7 +13,7 @@ Ext.define('SubTunesDesktop.model.Record', {
 		{name: 'year',         type: 'int'},
 		{name: 'genre',        type: 'string'},
 		{name: 'coverArt',     type: 'string'},
-		{name: 'size',		   type: 'int'},
+		{name: 'size',	       type: 'int'},
 		{name: 'contentType',  type: 'string'},
 		{name: 'suffix',       type: 'string'},
 		{name: 'duration',     type: 'float'},
@@ -21,14 +21,14 @@ Ext.define('SubTunesDesktop.model.Record', {
 		{name: 'name',         type: 'string'},
 		{name: 'playstate',    type: 'string'}
 	],
-	proxy: {
-    	type: 'browserdb',
-    	dbName: 'subtuneslibrary',
-    	objectStoreName: 'subtuneslibrary',
-    	dbVersion: '1.1',
-    	writer: {
-			type: 'json',
-			writeAllFields: false
-		}
-    }
+    proxy: {
+        type: 'browserdb',
+        dbName: 'subtuneslibrary',
+        objectStoreName: 'subtuneslibrary',
+        dbVersion: '1.1',
+        writer: {
+            type: 'json',
+            writeAllFields: false
+        }
+   }
 });
